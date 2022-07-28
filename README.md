@@ -82,7 +82,7 @@ npm install -g yarn
 ```
 `yarn -v` と入れて、`1.22.17（ここタイミングによって違うかも）` と表示されれば OK です。    
   
-[git-cz](git-cz) をインストールし、コミットの設定を行う
+[git-cz](https://github.com/streamich/git-cz) をインストールし、コミットの設定を行う
 ```bash
 yarn global add git-cz
 cat ./changelog.config.js > ~/changelog.config.js
