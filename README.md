@@ -17,7 +17,7 @@
 ざっくり説明すると、以下の感じになります。
 
 <details>
-<summary>初回インストール時は、これも実行してください</summary>
+<summary>※ 初回インストール時は、これも実行してください</summary>
 
 ##### 参加年度のリポジトリ（`etrobo_20XX_workspace`）を `$ETROBO_HRP3_WORKSPACE` にクローンする
 以下を実行します。  
@@ -58,7 +58,8 @@ git commit -m "コミットメッセージ"
 git push origin feature/init
 ```
 
-##### 「コミットメッセージのプレフィックスどれにしたら良いかわからん！楽に指定したい」って人 🙋‍♂
+<details>
+<summary>※ 「コミットメッセージのプレフィックスどれにしたら良いかわからん！楽に指定したい」って人 🙋‍♂</summary>
 いい感じのツール使って、サボりましょう。  
   
 [nodebrew](https://github.com/hokaccha/nodebrew) をインストールします。
@@ -89,6 +90,7 @@ cat ./changelog.config.js > ~/changelog.config.js
 ```
 
 こうすると、`git commit` の代わりに `git cz` でいい感じのプレフィックスを指定できます。
+</details>
 
 ### モデル図
 TODO: 環境を整えたら書きます
