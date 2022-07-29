@@ -22,7 +22,7 @@
 ##### 参加年度のリポジトリ（`etrobo_20XX_workspace`）を `$ETROBO_HRP3_WORKSPACE` にクローンする
 以下を実行します。  
 ```shell
-cd $ETROBO_HRP3_WORKSPACE && echo git clone git@github.com:irc-tohoku-etrobo/etrobo_$(date +%Y)_workspace.git && cd etrobo_$(date +%Y)_workspace.git
+cd $ETROBO_HRP3_WORKSPACE && echo git clone git@github.com:irc-tohoku-etrobo/etrobo_$(date +%Y)_workspace.git && cd etrobo_$(date +%Y)_workspace
 ```
 
 ##### ブランチを分ける
@@ -58,7 +58,7 @@ git commit -m "コミットメッセージ"
 git push origin feature/init
 ```
 
-##### 「コミットメッセージのプレフィクスどれにしたら良いかわからん！楽に指定したい」って人 🙋‍♂
+##### 「コミットメッセージのプレフィックスどれにしたら良いかわからん！楽に指定したい」って人 🙋‍♂
 いい感じのツール使って、サボりましょう。  
   
 [nodebrew](https://github.com/hokaccha/nodebrew) をインストールします。
@@ -88,7 +88,7 @@ yarn global add git-cz
 cat ./changelog.config.js > ~/changelog.config.js
 ```
 
-こうすると、`git commit` の代わりに `git cz` でいい感じのプレフィクスを指定できます。
+こうすると、`git commit` の代わりに `git cz` でいい感じのプレフィックスを指定できます。
 
 ### モデル図
 TODO: 環境を整えたら書きます
