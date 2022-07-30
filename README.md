@@ -117,5 +117,40 @@ cat ./changelog.config.js > ~/changelog.config.js
 こうすると、`git commit` の代わりに `git cz` でいい感じのプレフィックスを指定できます。
 </details>
 
-### モデル図
-TODO: 環境を整えたら書きます
+### PlantUML をセットアップ
+ETロボコンでは、モデル図の作成も評価対象になります。  
+本チームでは、UML 作成に PlantUML を使用する方針なので、環境構築方法を記載します。  
+
+##### Java をインストール
+<details>
+<summary>Windows</summary>
+
+[https://www.java.com/ja/download/](https://www.java.com/ja/download/) から Java をインストールします。
+
+```shell
+java --version
+
+# ↓ みたいな内容が表示されたら OK
+# openjdk 17.0.3 2022-04-19 LTS
+# OpenJDK Runtime Environment Corretto-17.0.3.6.1 (build 17.0.3+6-LTS)
+# OpenJDK 64-Bit Server VM Corretto-17.0.3.6.1 (build 17.0.3+6-LTS, mixed mode, sharing)
+```
+</details>
+
+
+##### Graphviz をインストール
+<details>
+<summary>Windows</summary>
+
+[https://graphviz.org/download/#windows](https://graphviz.org/download/#windows) の「Stable Windows install packages」から任意のバージョンをインストールします。  
+（なるべく新しいやつを入れると良いと思います。）
+</details>
+
+##### VSCode に PlantUML の拡張機能をインストール
+![VSCodeの拡張機能の位置を説明している画像](https://user-images.githubusercontent.com/11432913/181919931-8db2d179-8692-41da-b0c5-6b307ccd8b86.png)
+
+VSCode の Extensions から PlantUML をインストールします。
+
+![PlantUMLインストール後のVSCode](https://user-images.githubusercontent.com/11432913/181920012-8db9141a-1fae-46f1-ad96-4ed1b28d4cf8.png)
+
+こんな感じでインストールできたら OKです。
