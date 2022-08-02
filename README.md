@@ -11,18 +11,43 @@
 - RasPike
   - https://github.com/ETrobocon/RasPike
 
+### ルール的なやつ
+##### コミットルール
+コミットメッセージには、プレフィックスを付けましょう。
+
+| プレフィックス  | 意味             |
+|----------|----------------|
+| add      | 機能/コード/ファイルの追加 |
+| update   | 新規ではない機能追加     |
+| change   | 仕様変更による機能変更    |
+| fix      | バグの修正          |
+| refactor | コードのリファクタリング   |
+| remove   | 機能/コード/ファイルの削除 |
+| test     | テストの追加やテストの修正  |
+| chore    | 自動生成ファイルをコミット  |
+
+##### ブランチ運用方針
+Git-flow をベースに運用していきます。  
+（けど、あまり厳密にやっていく気はないので自由にやっていきましょう）
+
+| プレフィックス | 意味                |
+|---------|-------------------|
+| feature | 追加機能の実装を行う場合に使います |
+| fix     | バグの修正を行う際に使います    |
+| hotfix  | 緊急で修正しなくてはいけないバグ  |
+
 ### 開発のやり方
 [Github を用いて Git-flow の開発を行うとはなんぞや？？？](https://qiita.com/KosukeSone/items/514dd24828b485c69a05) はリンク先を読んでもらえればと思います。  
 詳しい説明は、チームメンバーから聞いてください。  
 ざっくり説明すると、以下の感じになります。
 
 <details>
-<summary>初回インストール時は、これも実行してください</summary>
+<summary>※ 初回インストール時は、これも実行してください</summary>
 
 ##### 参加年度のリポジトリ（`etrobo_20XX_workspace`）を `$ETROBO_HRP3_WORKSPACE` にクローンする
 以下を実行します。  
 ```shell
-cd $ETROBO_HRP3_WORKSPACE && echo git clone git@github.com:irc-tohoku-etrobo/etrobo_$(date +%Y)_workspace.git && cd etrobo_$(date +%Y)_workspace.git
+cd $ETROBO_HRP3_WORKSPACE && echo git clone git@github.com:irc-tohoku-etrobo/etrobo_$(date +%Y)_workspace.git && cd etrobo_$(date +%Y)_workspace
 ```
 
 ##### ブランチを分ける
@@ -58,7 +83,8 @@ git commit -m "コミットメッセージ"
 git push origin feature/init
 ```
 
-##### 「コミットメッセージのプレフィクスどれにしたら良いかわからん！楽に指定したい」って人 🙋‍♂
+<details>
+<summary>※ 「コミットメッセージのプレフィックスどれにしたら良いかわからん！楽に指定したい」って人 🙋‍♂</summary>
 いい感じのツール使って、サボりましょう。  
   
 [nodebrew](https://github.com/hokaccha/nodebrew) をインストールします。
@@ -88,32 +114,8 @@ yarn global add git-cz
 cat ./changelog.config.js > ~/changelog.config.js
 ```
 
-こうすると、`git commit` の代わりに `git cz` でいい感じのプレフィクスを指定できます。
+こうすると、`git commit` の代わりに `git cz` でいい感じのプレフィックスを指定できます。
+</details>
 
 ### モデル図
 TODO: 環境を整えたら書きます
-
-### ルール的なやつ
-##### コミットルール
-コミットメッセージには、プレフィックスを付けましょう。
-
-| プレフィックス  | 意味             |
-|----------|----------------|
-| add      | 機能/コード/ファイルの追加 |
-| update   | 新規ではない機能追加     |
-| change   | 仕様変更による機能変更    |
-| fix      | バグの修正          |
-| refactor | コードのリファクタリング   |
-| remove   | 機能/コード/ファイルの削除 |
-| test     | テストの追加やテストの修正  |
-| chore    | 自動生成ファイルをコミット  |
-
-##### ブランチ運用方針
-Git-flow をベースに運用していきます。  
-（けど、あまり厳密にやっていく気はないので自由にやっていきましょう）  
-
-| プレフィックス | 意味                |
-|---------|-------------------|
-| feature | 追加機能の実装を行う場合に使います |
-| fix     | バグの修正を行う際に使います    |
-| hotfix  | 緊急で修正しなくてはいけないバグ  |
